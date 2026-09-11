@@ -20,6 +20,12 @@ const  {transactionRoutes}  = require("./routes/transaction.routes");
 /**
  * - Using the routes
  */
+
+app.get("/", (req, res) => {
+    res.send("Service is running");
+});
+
+
 app.use("/api/auth",authRouter);
 app.use("/api/accounts",accountRouter);
 app.use("/api/transactions", transactionRoutes);
